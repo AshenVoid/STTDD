@@ -60,9 +60,7 @@ class ComplexNumber:
     def multiply(self, other):
         if not isinstance(other, ComplexNumber):
             raise TypeError("Operand must be a ComplexNumber")
-        real = self.real * other.real - self.imag * other.imag
-        imag = self.real * other.imag + self.imag * other.real
-        return ComplexNumber(real, imag)
+        return ComplexNumber(self.real*other.real, self.imag *other.imag)
 
     def divide(self,other):
         if not isinstance(other, ComplexNumber):
