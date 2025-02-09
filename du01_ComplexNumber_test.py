@@ -2,6 +2,12 @@ import pytest
 from du01_ComplexNumber import ComplexNumber
 
 class TestComplexNumber:
+    def setup_method(self):
+        print("\nThe magic is about to happen!")
+
+    def teardown_method(self):
+        print("\nOUT OF MANA, SEND MORE DUDES (process finished flawlessly)")
+
     def test_add(self):
         # Sčítání kladných
         c1 = ComplexNumber(1,2)
